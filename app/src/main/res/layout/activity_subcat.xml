@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbarTitle"
+        layout="@layout/toolbar_activity" />
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:elevation="5dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5dip"
+            android:background="@drawable/btn_round_shape"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:drawablePadding="6dp"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Search for products,Brands and More"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:transitionName="profile" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5dip"
+            android:layout_marginTop="@dimen/_5dip"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_category_list" />
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="@color/offwhites"
+            android:layout_marginHorizontal="@dimen/_5dip"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSubCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5dip"
+            android:layout_marginTop="@dimen/_5dip"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_weight="1"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_subcategory" />
+
+    </LinearLayout>
+
+</LinearLayout>

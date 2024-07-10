@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.RefferalActivity">
+
+    <include
+        android:id="@+id/toolbarTitle"
+        layout="@layout/toolbar_activity" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200dip"
+        android:src="@drawable/img_refferal"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share Now"
+        android:background="@drawable/btn_round_shape"
+        android:textColor="@color/white"
+        android:padding="@dimen/_10dp"
+        android:drawableLeft="@drawable/ic_baseline_share_24"
+        android:drawablePadding="@dimen/_5dip"
+        android:textSize="@dimen/_14sp"
+        android:drawableTint="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcRefferalList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="2"
+        android:layout_marginTop="@dimen/_5dip"
+        android:layout_weight="1"
+        android:layout_below="@+id/view"
+        android:background="@color/white"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/item_refferal_list" />
+
+</LinearLayout>

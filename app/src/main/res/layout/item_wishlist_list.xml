@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/_5dip"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardCornerRadius="@dimen/_10dp"
+        android:layout_margin="@dimen/_10dp"
+        android:foreground="?selectableItemBackground"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            android:src="@drawable/img_slide" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="@dimen/_30dip"
+        android:layout_height="@dimen/_30dip"
+        android:padding="@dimen/_6dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/icon_delete" />
+    <LinearLayout
+        android:id="@+id/llSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/CardImage"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10dp"
+        android:padding="4dp">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pink Hoddie"
+            android:layout_toRightOf="@+id/CardImage"
+            android:gravity="start"
+            android:layout_toLeftOf="@+id/ivDelete"
+            android:layout_marginStart="@dimen/_2dip"
+            android:layout_marginTop="@dimen/_5dip"
+            android:layout_gravity="center"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="@dimen/_16sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="by Mango"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/CardImage"
+            android:gravity="start"
+            android:layout_below="@+id/tvTitle"
+            android:layout_toLeftOf="@+id/ivDelete"
+            android:layout_marginStart="@dimen/_2dip"
+            android:layout_marginTop="@dimen/_5dip"
+            android:layout_gravity="center"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="@dimen/_16sp" />
+        <LinearLayout
+            android:id="@+id/llPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/CardImage"
+            android:layout_below="@+id/tvTitle"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvPriceApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:padding="@dimen/_4dip"
+                android:text="3200"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sp" />
+
+            <TextView
+                android:id="@+id/tvActualPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="323"
+                android:textColor="@color/red"
+                android:padding="@dimen/_4dip"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20%"
+                android:textSize="@dimen/_14sp"
+                android:visibility="gone"
+                android:padding="@dimen/_4dip"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/lato_regular"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/CardImage"
+            android:layout_below="@+id/llPrice"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cvcvvb"
+                android:singleLine="true"
+                android:maxLines="5"
+                android:padding="@dimen/_4dip"
+                android:ellipsize="end"
+                android:textSize="@dimen/_16sp"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="₹160"
+                android:padding="@dimen/_4dip"
+                android:singleLine="true"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2dip"
+        android:background="@color/light_grays"
+        android:layout_below="@+id/CardImage"
+        android:layout_marginTop="@dimen/_10dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_6dp"
+    android:orientation="vertical">
+<de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/ivProfile"
+    android:layout_width="@dimen/_40dip"
+    android:layout_height="@dimen/_40dip"
+    android:layout_marginEnd="@dimen/_10dp"
+    android:src="@drawable/ic_search_black_24dp"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xzcvzxc"
+        android:layout_toRightOf="@+id/ivProfile"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/lato_regular"/>
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xzcvzxc"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/_2dip"
+        android:layout_toRightOf="@+id/ivProfile"
+        android:layout_marginBottom="@dimen/_5dip"
+        android:layout_below="@+id/tvName"
+        android:fontFamily="@font/lato_regular"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2dip"
+        android:layout_marginTop="@dimen/_8dip"
+        android:layout_below="@+id/ivProfile"
+        android:background="@color/light_grays"/>
+</RelativeLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.WalletActivity">
+    <include
+        android:id="@+id/toolbarTitle"
+        layout="@layout/toolbar_activity" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/search_box_background"
+        android:padding="@dimen/_4dip"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/_4dip"
+            android:src="@drawable/ic_baseline_account_balance_wallet_24"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/cirle_shape"
+            android:backgroundTint="#FF9800"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/MediumTextViewThin"
+            android:textSize="@dimen/_16sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10dp"
+            android:text="Wallet Balance"
+            android:textColor="@color/g_gray700" />
+
+        <TextView
+            android:id="@+id/tvWalletBal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato_bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearWithdrawal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/search_box_background"
+        android:padding="@dimen/_4dip"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/_4dip"
+            android:src="@drawable/icon_withdraw"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/cirle_shape"
+            android:backgroundTint="#FF9800"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvWithdrawal"
+            style="@style/MediumTextViewThin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Withdrawal"
+            android:textColor="@color/g_gray700"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/g_blue_gray200"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearWalletHis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/search_box_background"
+        android:padding="@dimen/_4dip"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/_4dip"
+            android:src="@drawable/icon_historyfile"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/cirle_shape"
+            android:backgroundTint="#FF9800"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvWalletHis"
+            style="@style/MediumTextViewThin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Wallet History"
+            android:textColor="@color/g_gray700"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/g_blue_gray200"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearWithdrawalHis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/search_box_background"
+        android:padding="@dimen/_4dip"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/_4dip"
+            android:src="@drawable/icon_historyfile"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/cirle_shape"
+            android:backgroundTint="#FF9800"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvWithdrawalHis"
+            style="@style/MediumTextViewThin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Withdrawal History"
+            android:textColor="@color/g_gray700"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/g_blue_gray200"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+</LinearLayout>

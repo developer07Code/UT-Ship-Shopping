@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:visible="false"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"
+            android:visible="false"
+            android:title="My Cart" />
+        <item
+            android:id="@+id/nav_wishlist"
+            android:icon="@drawable/icon_wishlist"
+            android:visible="false"
+            android:title="My Wishlist" />
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/icon_order"
+            android:visible="false"
+            android:title="My Order" />
+        <item
+            android:id="@+id/nav_offer"
+            android:icon="@drawable/ic_baseline_local_offer_24"
+            android:visible="false"
+            android:title="Offer &amp; Discount" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_baseline_person_2_24"
+            android:visible="false"
+            android:title="My Account" />
+        <item
+            android:id="@+id/nav_termcondition"
+            android:icon="@drawable/icon_term"
+            android:visible="false"
+            android:title="Term &amp; Condition" />
+        <item
+            android:id="@+id/nav_privacypolicy"
+            android:icon="@drawable/icon_perivacy"
+            android:visible="false"
+            android:title="Privacy Policy" />
+        <item
+            android:id="@+id/nav_refund"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:visible="false"
+            android:title="Refund" />
+        <item
+            android:id="@+id/nav_contactUs"
+            android:icon="@drawable/ic_baseline_phone_iphone_24"
+            android:visible="false"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/nav_aboutUs"
+            android:icon="@drawable/icon_perivacy"
+            android:visible="false"
+            android:title="About Us" />
+
+    </group>
+</menu>

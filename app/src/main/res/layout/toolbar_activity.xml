@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+<ImageView
+    android:id="@+id/img_close"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="5dp"
+    android:padding="5dp"
+    android:src="@drawable/quantum_ic_arrow_back_grey600_24"
+    app:tint="@color/black" />
+
+<TextView
+    android:id="@+id/tvTitleProName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/_10dp"
+    android:layout_weight="1"
+    android:fontFamily="@font/lato_bold"
+    android:padding="4dp"
+    android:layout_marginTop="@dimen/_4dip"
+    android:text="Product Detail"
+    android:textColor="@color/black"
+    android:textSize="@dimen/_16sp"
+    android:textStyle="bold" />
+
+<ImageView
+    android:id="@+id/img_Fav"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="5dp"
+    android:padding="5dp"
+    android:src="@drawable/ic_baseline_favorite_border_24"
+    app:tint="@color/black" />
+<ImageView
+    android:id="@+id/img_Cart"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="5dp"
+    android:padding="5dp"
+    android:src="@drawable/ic_outline_shopping_cart_24"
+    app:tint="@color/black" />
+<TextView
+    android:id="@+id/tvAddAddress"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Add Address"
+    android:background="@drawable/btn_round_shape"
+    android:padding="@dimen/_6dp"
+    android:fontFamily="@font/lato_bold"
+    android:textSize="@dimen/_14sp"
+    android:visibility="gone"
+    android:layout_gravity="center"
+    android:textColor="@color/white"/>
+</LinearLayout>

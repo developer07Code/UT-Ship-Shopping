@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/containerid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/icon_shapes"/>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="250dp"
+        android:layout_height="@dimen/_100dip"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_40dip"
+        android:background="@drawable/app_logo"/>
+    <LinearLayout
+        android:id="@+id/llLoginText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="@dimen/_20dip"
+        android:padding="@dimen/_5dip"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="Login"
+            android:layout_marginEnd="@dimen/_5dip"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_5dip"
+            android:textSize="20sp" />
+        <View
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:background="@color/white"
+            android:layout_marginStart="@dimen/_5dip"
+            android:layout_marginEnd="@dimen/_5dip"/>
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="Signup"
+            android:layout_marginStart="@dimen/_5dip"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10dp"
+        android:layout_below="@+id/llLoginText"
+        android:layout_marginTop="@dimen/_20dip"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:layout_marginHorizontal="15dp"
+        app:cardElevation="@dimen/_10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20dip"
+                android:layout_marginTop="@dimen/_20dip"
+                android:padding="@dimen/_10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:elevation="@dimen/_6dp"
+                android:background="@drawable/shape_logintextbox">
+
+    <EditText
+        android:id="@+id/edEmailId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Enter Your Email Address"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="@dimen/_10dp"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:background="@null"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20dip"
+                android:layout_marginTop="5dp"
+                android:padding="@dimen/_10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:elevation="@dimen/_6dp"
+                android:background="@drawable/shape_logintextbox">
+               <!-- <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true">-->
+                <EditText
+                    android:id="@+id/edPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Your password"
+                    android:drawableLeft="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:background="@null"/>
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20dip"
+                android:layout_marginTop="5dp"
+                android:padding="@dimen/_10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:elevation="@dimen/_6dp"
+                android:visibility="gone"
+                android:background="@drawable/shape_logintextbox">
+
+                <EditText
+                    android:id="@+id/edMobNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Your mobile number"
+                    android:drawableLeft="@drawable/ic_baseline_phone_iphone_24"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:background="@null"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOTP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20dip"
+                android:layout_marginTop="5dp"
+                android:padding="@dimen/_10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:elevation="@dimen/_6dp"
+                android:background="@drawable/shape_logintextbox">
+
+                <EditText
+                    android:id="@+id/edOTP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Your otp"
+                    android:drawableLeft="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:padding="8dp"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:background="@null"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvForgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center"
+        android:layout_below="@+id/card1"
+        android:layout_alignParentEnd="true"
+        android:text="ForgotPassword"
+        android:layout_marginTop="@dimen/_5dip"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_18sp" />
+    <TextView
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:background="@drawable/extra_round_shape"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:layout_above="@+id/llSocial"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:layout_marginHorizontal="@dimen/_10dp"
+        android:textSize="16sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/llSocial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/signInGoogle"
+            android:layout_width="@dimen/_50dip"
+            android:layout_height="@dimen/_50dip"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:foreground="@drawable/borderless_ripple"
+            android:src="@drawable/google_auth"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/signInFacebook"
+            android:layout_width="@dimen/_50dip"
+            android:layout_height="@dimen/_50dip"
+            android:src="@drawable/facebook_auth"
+            android:foreground="@drawable/borderless_ripple"
+            android:layout_marginStart="@dimen/_10dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,6 @@
+Pacakge Name:com.data.utship
+com.data.utship
+Domain:
+Keystore Password:123456
+Key Alias:utship
+KeyPassword:123456

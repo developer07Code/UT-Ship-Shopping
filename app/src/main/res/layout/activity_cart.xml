@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbarTitle"
+        layout="@layout/toolbar_activity" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/toolbarTitle"
+        android:background="@color/light_grays"/>
+
+<LinearLayout
+    android:id="@+id/llShopNowSection"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:visibility="gone"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="@dimen/_40dip"
+        android:layout_height="@dimen/_40dip"
+        android:src="@drawable/ic_outline_shopping_cart_24"/>
+    <TextView
+        android:id="@+id/tvShopNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop Now"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@drawable/btn_round_shape"
+        android:textColor="@color/white"
+        android:paddingVertical="@dimen/_6dp"
+        android:textSize="@dimen/_16sp"
+        android:fontFamily="@font/lato_regular"
+        android:paddingHorizontal="@dimen/_10dp"/>
+</LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="2"
+        android:layout_weight="1"
+        android:layout_below="@+id/view"
+        android:background="@color/white"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/item_cart_list" />
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcFav"
+        style="@style/RecycleView"
+        android:layout_marginTop="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="8"
+        android:background="@color/light_grays"
+        tools:listitem="@layout/item_wishlist_list" />-->
+
+    <RelativeLayout
+        android:id="@+id/llPaymentSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="@dimen/_10dp"
+        android:background="@color/white"
+     android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/tvPriceCart"
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_5dip"
+            android:text="₹0.00"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary" />
+        <TextView
+            android:id="@+id/tvViewDetail"
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_5dip"
+            android:text="View Detail"
+            android:textSize="14sp"
+            android:layout_below="@+id/tvPriceCart"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_round_shape"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Checkout"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:padding="@dimen/_6dp"
+            android:text="Order Detail"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_16sp" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_30dip"
+            android:layout_height="@dimen/_30dip"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:src="@drawable/ic_baseline_clear_24" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2dip"
+        android:layout_marginTop="@dimen/_5dip"
+        android:background="@color/light_grays" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5dip"
+        android:layout_marginTop="@dimen/_2dip"
+        android:layout_marginBottom="@dimen/_2dip"
+        app:cardCornerRadius="@dimen/_5dip"
+        app:cardElevation="@dimen/_10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dip"
+            android:orientation="vertical"
+            android:padding="@dimen/_4dip">
+
+            <ImageView
+                android:id="@+id/ivProductImg"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_clear_24" />
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_2dip"
+                android:fontFamily="@font/lato_bold"
+                android:padding="@dimen/_4dip"
+                android:text="Use Wallet"
+                android:layout_below="@+id/ivProductImg"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sp" />
+
+            <TextView
+                android:id="@+id/tvPaymentMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_2dip"
+                android:fontFamily="@font/lato_bold"
+                android:padding="@dimen/_4dip"
+                android:text="Use Wallet"
+                android:visibility="invisible"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/ivProductImg"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sp" />
+            <TextView
+                android:id="@+id/tvOrderStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_2dip"
+                android:fontFamily="@font/lato_regular"
+                android:padding="@dimen/_4dip"
+                android:text="Use Wallet"
+                android:layout_below="@+id/tvPaymentMode"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sp" />
+            <LinearLayout
+                android:id="@+id/llPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/tvOrderStatus"
+                android:padding="@dimen/_4dip">
+
+                <TextView
+                    android:id="@+id/tvPriceApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:maxLines="5"
+                    android:padding="@dimen/_4dip"
+                    android:singleLine="true"
+                    android:text="₹120"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sp" />
+
+                <TextView
+                    android:id="@+id/tvActualPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lato_regular"
+                    android:maxLines="5"
+                    android:padding="@dimen/_4dip"
+                    android:visibility="gone"
+                    android:singleLine="true"
+                    android:text="₹160"
+                    android:textSize="@dimen/_14sp" />
+
+                <TextView
+                    android:id="@+id/tvQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lato_regular"
+                    android:maxLines="5"
+                    android:padding="@dimen/_4dip"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/llPrice"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@color/light_grays" />
+
+            <LinearLayout
+                android:id="@+id/llColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dip"
+                android:layout_below="@+id/view"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tvSize"
+                    android:layout_width="@dimen/_40dip"
+                    android:layout_height="@dimen/_40dip"
+                    android:background="@drawable/btn_round_shape"
+                    android:gravity="center"
+                    android:text="xl"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvColor"
+                    android:layout_width="@dimen/_40dip"
+                    android:layout_height="@dimen/_40dip"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_5dip"
+                    android:background="@drawable/cirle_shape"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="@dimen/_16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5dip"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="@dimen/_2dip"
+        app:cardCornerRadius="@dimen/_5dip"
+        app:cardElevation="@dimen/_10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4dip"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvAddTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="5"
+                android:padding="@dimen/_2dip"
+                android:singleLine="true"
+                android:drawablePadding="@dimen/_5dip"
+                android:gravity="center"
+                android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                android:text="Address :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sp" />
+            <TextView
+                android:id="@+id/tvAddName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:maxLines="5"
+                android:padding="@dimen/_4dip"
+                android:layout_marginTop="@dimen/_5dip"
+                android:singleLine="true"
+                android:layout_below="@+id/tvAddTitle"
+                android:text="₹120"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sp" />
+            <TextView
+            android:id="@+id/tvAddType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_regular"
+            android:maxLines="5"
+            android:padding="@dimen/_4dip"
+            android:singleLine="true"
+                android:layout_below="@+id/tvAddTitle"
+            android:layout_alignParentEnd="true"
+            android:text="₹120"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp" />
+            <TextView
+                android:id="@+id/tvCityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:maxLines="5"
+                android:padding="@dimen/_4dip"
+                android:layout_below="@+id/tvAddName"
+                android:singleLine="true"
+                android:text="₹120"
+                android:textSize="@dimen/_14sp" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5dip"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="@dimen/_2dip"
+        app:cardCornerRadius="@dimen/_5dip"
+        app:cardElevation="@dimen/_10dp">
+        <RelativeLayout
+            android:id="@+id/llAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llColor"
+            android:padding="@dimen/_4dip"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvPaymentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:maxLines="5"
+                android:padding="@dimen/_2dip"
+                android:singleLine="true"
+                android:drawablePadding="@dimen/_5dip"
+                android:gravity="center"
+                android:drawableLeft="@drawable/ic_baseline_account_balance_wallet_24"
+                android:text="Payment :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sp" />
+            <TextView
+                android:id="@+id/tvPaymentMod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_2dip"
+                android:fontFamily="@font/lato_bold"
+                android:padding="@dimen/_4dip"
+                android:layout_below="@+id/tvPaymentTitle"
+                android:text="Use Wallet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sp" />
+            <TextView
+                android:id="@+id/tvTotalAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:padding="@dimen/_4dip"
+                android:layout_weight="1"
+                android:layout_below="@+id/tvPaymentMod"
+                android:text="Total Amount"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_5dip"
+                android:textSize="@dimen/_14sp" />
+
+            <TextView
+                android:id="@+id/tvTotalAmtValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/lato_bold"
+                android:padding="@dimen/_4dip"
+                android:text="Bag Total"
+                android:layout_marginTop="@dimen/_5dip"
+                android:layout_below="@+id/tvPaymentMod"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

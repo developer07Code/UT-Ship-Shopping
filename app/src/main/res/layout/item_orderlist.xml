@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvProductItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardPreventCornerOverlap="true"
+    android:layout_margin="@dimen/_5dip"
+    android:foreground="?selectableItemBackground"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4dip"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/_50dip"
+            android:layout_height="@dimen/_50dip"
+            android:scaleType="fitXY"
+            android:background="@color/gray"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/_5dip"
+            android:src="@drawable/img_slide" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:maxLines="2"
+            android:padding="2dp"
+            android:layout_marginTop="@dimen/_5dip"
+            android:layout_toRightOf="@+id/ivImage"
+            android:layout_marginStart="@dimen/_5dip"
+            android:ellipsize="end"
+            android:textSize="@dimen/_14sp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:maxLines="2"
+            android:layout_marginTop="@dimen/_5dip"
+            android:layout_below="@+id/tvTitle"
+            android:layout_toRightOf="@+id/ivImage"
+            android:layout_marginStart="@dimen/_5dip"
+            android:ellipsize="end"
+            android:textSize="@dimen/_14sp"
+            android:fontFamily="@font/lato_regular" />
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:maxLines="2"
+            android:layout_marginTop="@dimen/_5dip"
+            android:layout_below="@+id/tvDate"
+            android:layout_toRightOf="@+id/ivImage"
+            android:layout_marginStart="@dimen/_5dip"
+            android:ellipsize="end"
+            android:textSize="@dimen/_14sp"
+            android:fontFamily="@font/lato_regular" />
+        <TextView
+            android:id="@+id/tvPaymentMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_5dip"
+            android:ellipsize="end"
+            android:textSize="@dimen/_14sp"
+            android:textColor="@color/black"
+            android:paddingVertical="@dimen/_6dp"
+            android:paddingHorizontal="@dimen/_10dp"
+            android:fontFamily="@font/lato_regular" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

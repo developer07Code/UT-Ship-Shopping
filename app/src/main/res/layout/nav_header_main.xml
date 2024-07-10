@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/_20dip"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="@dimen/_100dip"
+        android:layout_gravity="center"
+        android:padding="@dimen/_16dip"
+        android:layout_marginTop="@dimen/_20dip"
+        app:srcCompat="@drawable/app_logo" />
+
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/_1dip"
+       android:background="@color/gray"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcNaDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_drawer_list" />
+</LinearLayout>
+
+<!--    android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->

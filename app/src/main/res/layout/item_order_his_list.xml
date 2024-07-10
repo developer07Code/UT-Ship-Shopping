@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/_2dip"
+    android:padding="@dimen/_6dp"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="@dimen/_60dip"
+        android:layout_height="@dimen/_60dip"
+        android:layout_gravity="start"
+        android:src="@drawable/sweet_img" />
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sweets"
+        android:layout_toRightOf="@+id/ivImage"
+        android:gravity="start"
+        android:layout_marginStart="@dimen/_2dip"
+        android:layout_marginTop="@dimen/_5dip"
+        android:layout_gravity="center"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="@dimen/_14sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sweets"
+        android:layout_toRightOf="@+id/ivImage"
+        android:gravity="start"
+        android:layout_gravity="center"
+        android:fontFamily="@font/lato_bold"
+        android:layout_below="@+id/tvTitle"
+        android:textSize="@dimen/_14sp"
+        android:padding="2dp"
+        android:textColor="@color/black"/>
+
+
+
+</RelativeLayout>

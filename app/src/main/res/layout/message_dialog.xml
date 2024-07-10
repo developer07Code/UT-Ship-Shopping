@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10dp"
+    android:layout_marginHorizontal="@dimen/_20dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transperent"
+        android:id="@+id/parentLinLayoutId"
+        android:gravity="center"
+        android:padding="@dimen/_16dip"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_10dp"
+                android:gravity="center"
+                android:text="Remove Card"
+                android:fontFamily="@font/lato_bold"
+                android:visibility="gone"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="@dimen/_10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_16dip"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Are you sure you want to remove card containing card no. : "
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/cardNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_20dp"
+                    android:text=""
+                    android:visibility="gone"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_16sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/camerabutton"
+                    android:layout_width="@dimen/_100dip"
+                    android:layout_height="@dimen/_40dip"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_round_shape"
+                    android:backgroundTint="@color/gray"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textSize="@dimen/_16sp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gallerybutton"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/_40dip"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_round_shape"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ok"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

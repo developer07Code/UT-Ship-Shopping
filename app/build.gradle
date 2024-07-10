@@ -1,0 +1,144 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.data.utship'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.data.utship"
+        minSdk 21
+        targetSdk 33
+        versionCode 3
+        versionName "1.2"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    ndkVersion "26.0.10792818"
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            ndk {
+                debugSymbolLevel 'SYMBOL_TABLE'
+            }
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.3'
+    implementation 'com.google.firebase:protolite-well-known-types:18.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Network
+
+    //TODO Retrofit Data Service
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.5'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.5'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0' //RxJava Factory Converter
+
+    //Room
+    implementation "androidx.room:room-runtime:2.2.6"
+    annotationProcessor "androidx.room:room-compiler:2.2.6"
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+
+    implementation 'com.github.bumptech.glide:glide:4.13.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //MVVM
+    def lifecycle_version = "2.3.1"
+    // ViewModel:
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    // Saved state module:
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    // LiveData:
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version" //LiveData - RxJava Converter
+    // Annotation processor Java8:
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+
+
+
+    // google place
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+
+
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+
+    //LottieAnimation
+    implementation "com.airbnb.android:lottie:3.4.0"
+    implementation("com.tbuonomo:dotsindicator:4.3")
+
+    /////Gif/////////////////////////
+    implementation "pl.droidsonroids.gif:android-gif-drawable:1.2.22"
+
+    //Searchable
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+
+    //////////////////inAppUpdate////////////////////////
+    implementation 'com.google.android.play:core:1.10.0'
+
+
+    //////swiperefreshlayout
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Water-Wave-Animation
+    implementation 'com.github.orbitalsonic:Water-Wave-Animation-Android:1.0.0'
+
+    //Facebook SDK
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+    implementation 'com.facebook.android:facebook-login:latest.release'
+
+    //Google Auth SDK
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+
+    //loading button
+    implementation 'br.com.simplepass:loading-button-android:2.2.0'
+
+/*    /////////Slider Banner/////
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'*/
+
+    /////Cashfree////////////////
+    implementation 'com.cashfree.pg:api:2.1.1'
+
+    implementation 'com.github.chnouman:AwesomeDialog:1.0.5'
+
+
+    //////////////////Razorpay Payment Gateway/////////////////////
+    /*implementation 'com.razorpay:checkout:1.6.24'*/
+    implementation 'com.razorpay:checkout:1.6.33'
+}
+android.buildTypes.release.ndk.debugSymbolLevel = 'FULL'
